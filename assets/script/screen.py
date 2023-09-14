@@ -13,9 +13,7 @@ def getFileName():
     return f'Screenshot {time.strftime("%d-%m-%Y %H-%M-%S")}';
 
 def run(seconds : int, path : str):
-    print(terminate_thread)
     while not terminate_thread:
-        while(True):
-            getScreen(path)
-            sleep(seconds)
-    else: print("exit")
+        print(terminate_thread)
+        getScreen(path)
+        sleep(seconds)
