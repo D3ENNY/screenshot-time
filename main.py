@@ -37,14 +37,15 @@ def start_thread():
             int(text_widget.get("1.0", "end-1c").strip()),
             path
         )
-    ).start()
-    print(thread)
+    )
+    thread.start()
     
 
 def on_closing():
     global window
     window.destroy()
     screen.terminate_thread = True
+    thread.join()
 
 window = Tk()
 
